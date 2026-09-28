@@ -1,0 +1,14 @@
+name: eeg-cgfm
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pytorch>=2.1
+  - numpy>=1.24
+  - scipy>=1.10
+  - scikit-learn>=1.2
+  - pyyaml>=6.0
+  - tqdm>=4.65
+  - pytest>=7.4
+  - pip

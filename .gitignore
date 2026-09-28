@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+data/raw/
+data/processed/
+outputs/
+checkpoints/
+*.pt
+*.pth
+*.pth.tar
+*.edf
+*.h5
+
+
+# Local settings and credentials
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local EEG arrays and generated artifacts
+*.npy
+*.npz
+.coverage
+htmlcov/

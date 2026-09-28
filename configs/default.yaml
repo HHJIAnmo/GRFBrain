@@ -1,0 +1,63 @@
+data:
+  sample_rate: 200
+  window_seconds: 1
+  total_windows: 12
+  history_windows: 11
+  num_nodes: 19
+  node_dim: 100
+  top_k: 3
+  graph: absolute_spearman_directed_topk
+
+ggrf:
+  alpha: 1.0
+  nu: 1.0
+  sigma_x: 0.4956156681505653
+  sigma_a: 0.25
+
+model:
+  hidden_dim: 64
+  node_context_dim: 64
+  edge_context_dim: 64
+  tau_dim: 32
+  num_heads: 4
+  num_blocks: 2
+  dropout: 0.0
+  interaction_mode: bidirectional
+  graph_forecaster_temporal_type: gru
+  graph_forecaster_spatial_layers: 1
+  graph_forecaster_temporal_layers: 2
+  graph_forecaster_dropout: 0.1
+
+flow_pretraining:
+  graph_forecaster_epochs: 3
+  epochs: 8
+  batch_size: 256
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  grad_clip: 5.0
+  lambda_node: 1.0
+  lambda_edge: 1.0
+  lambda_consistency: 0.0
+  q_x: 0.491373396248178
+  q_a: 0.12629429877215387
+
+downstream:
+  mode: node_hidden_no_transport
+  epochs: 20
+  patience: 5
+  batch_size: 64
+  classifier_lr: 0.0003
+  temporal_lr: 0.0003
+  field_lr: 0.00001
+  weight_decay: 0.0001
+  grad_clip: 5.0
+  fm_weight: 0.1
+  field_warmup_epochs: 1
+  selection_metric: auprc
+  threshold_metric: f1
+
+runtime:
+  seed: 123
+  device: cuda:0
+  num_workers: 4
+  deterministic: true

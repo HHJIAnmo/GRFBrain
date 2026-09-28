@@ -1,0 +1,12 @@
+{
+  "features": [
+    {
+      "id": "feat-001",
+      "name": "Standalone conditional GGRF Joint EEG release",
+      "description": "Data processing, graph construction, GGRF, Joint Transformer, Flow pretraining, no-transport downstream training/evaluation, documentation and tests",
+      "dependencies": [],
+      "status": "done",
+      "evidence": "2026-09-20: clean package built; 5/5 tests and synthetic end-to-end smoke passed; wheel built; harness 100/100. Original Joint field 97 state keys/393581 parameters and graph predictor 43 keys/125803 parameters are exact-compatible. Existing seed234 hidden and edge checkpoints converted to one portable checkpoint; four-real-dev replay had logit max error 5.31e-6 versus the original path."
+    }
+  ]
+}

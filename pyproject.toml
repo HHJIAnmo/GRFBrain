@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eeg-conditional-ggrf-joint"
+version = "0.1.0"
+description = "Conditional graph-Gaussian Flow representation learning for EEG"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "scikit-learn>=1.2",
+  "torch>=2.1",
+  "PyYAML>=6.0",
+  "tqdm>=4.65",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+edf = ["pyEDFlib>=0.1.36"]
+
+[project.scripts]
+eeg-cgfm-prepare = "eeg_cgfm.cli.prepare:main"
+eeg-cgfm-pretrain = "eeg_cgfm.cli.pretrain:main"
+eeg-cgfm-train = "eeg_cgfm.cli.train_downstream:main"
+eeg-cgfm-evaluate = "eeg_cgfm.cli.evaluate:main"
+eeg-cgfm-smoke = "eeg_cgfm.cli.smoke:main"
+eeg-cgfm-import-evobrain = "eeg_cgfm.cli.import_evobrain:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
