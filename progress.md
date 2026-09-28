@@ -50,3 +50,10 @@ metadata if desired.
 - The account plan does not support Pages from the private source repository.
   Published the HTML-only `HHJIAnmo/eeg-conditional-ggrf-visualization` repository
   via its `gh-pages` branch; added the live URL to the private source README.
+
+## 2026-09-28 — README concept and overview figures
+
+- Added Figure1.pdf as the concept figure and GRFODE.pdf as the method overview.
+- Rendered each single-page PDF to a 3000-pixel-wide PNG for inline README display.
+- Retained byte-identical original PDFs and linked each preview to its PDF.
+- Visually checked both rendered figures; verified relative links and PDF hashes.

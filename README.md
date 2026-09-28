@@ -6,6 +6,20 @@ an EEG-conditioned Joint Node–Edge velocity network with a graph Gaussian rand
 field (GGRF) source, then performs seizure classification with the
 `node_hidden_no_transport` readout.
 
+## Concept
+
+[![Concept: flow-based forecasting for neuronal population dynamics, comparing isotropic and graph-structured sources](docs/figures/concept.png)](docs/figures/concept.pdf)
+
+**Figure 1. Conceptual illustration of the proposed approach.**
+[View / download the original PDF](docs/figures/concept.pdf).
+
+## Method overview
+
+[![Method overview: temporal conditional source distribution and joint node-edge flow](docs/figures/overview.png)](docs/figures/overview.pdf)
+
+**Figure 2. Overview of the proposed approach.**
+[View / download the original PDF](docs/figures/overview.pdf).
+
 ## Interactive 3D visualization
 
 Explore predicted FC states and signed edge velocities for non-seizure and
