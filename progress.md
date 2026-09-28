@@ -46,5 +46,7 @@ metadata if desired.
   20 sample metadata entries; preserved graph arrays and interactive controls.
 - Browser verification: both 3D panels render; switching to signed velocity,
   selecting S01, and advancing transport time to 1 update the page.
-- Public online hosting awaits the owner's visibility decision. The existing
-  code repository remains private.
+- Owner approved public hosting of the visualization with model code kept private.
+- The account plan does not support Pages from the private source repository.
+  Published the HTML-only `HHJIAnmo/eeg-conditional-ggrf-visualization` repository
+  via its `gh-pages` branch; added the live URL to the private source README.

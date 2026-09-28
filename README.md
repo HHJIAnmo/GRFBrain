@@ -12,10 +12,12 @@ Explore predicted FC states and signed edge velocities for non-seizure and
 seizure examples. Rotate and zoom the linked 3D views, select class medians or
 individual samples, and adjust brain opacity and transport time τ.
 
-**[Download the interactive HTML](docs/visualization/index.html)** using the
+**[Open the interactive 3D visualization →](https://hhjianmo.github.io/eeg-conditional-ggrf-visualization/)**
+
+Or **[download the interactive HTML](docs/visualization/index.html)** using the
 file page's **Download raw file** button, then open it in a browser. An internet
 connection is required to load Plotly. GitHub's README and file preview do not
-execute interactive HTML; online hosting is pending visibility confirmation.
+execute interactive HTML; use the live page linked above.
 
 Original recording filenames and source indices are omitted from this page.
 The visualization shows transport trajectories; the default downstream
