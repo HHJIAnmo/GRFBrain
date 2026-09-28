@@ -37,3 +37,14 @@ metadata if desired.
   results above were not rerun during this packaging task.
 - Destination requested: private `HHJIAnmo/eeg-conditional-ggrf-joint`.
   Initial source commit uploaded successfully to the private repository.
+
+## 2026-09-28 — interactive HTML integration
+
+- Added the supplied Plotly visualization as `docs/visualization/index.html`
+  with document metadata, usage guidance, and a README entry.
+- Removed original recording filenames and global source indices from all
+  20 sample metadata entries; preserved graph arrays and interactive controls.
+- Browser verification: both 3D panels render; switching to signed velocity,
+  selecting S01, and advancing transport time to 1 update the page.
+- Public online hosting awaits the owner's visibility decision. The existing
+  code repository remains private.

@@ -6,6 +6,22 @@ an EEG-conditioned Joint Node–Edge velocity network with a graph Gaussian rand
 field (GGRF) source, then performs seizure classification with the
 `node_hidden_no_transport` readout.
 
+## Interactive 3D visualization
+
+Explore predicted FC states and signed edge velocities for non-seizure and
+seizure examples. Rotate and zoom the linked 3D views, select class medians or
+individual samples, and adjust brain opacity and transport time τ.
+
+**[Download the interactive HTML](docs/visualization/index.html)** using the
+file page's **Download raw file** button, then open it in a browser. An internet
+connection is required to load Plotly. GitHub's README and file preview do not
+execute interactive HTML; online hosting is pending visibility confirmation.
+
+Original recording filenames and source indices are omitted from this page.
+The visualization shows transport trajectories; the default downstream
+classifier still uses the deterministic `node_hidden_no_transport` readout
+(`NFE=0`).
+
 ## Important interpretation
 
 The overall representation is trained by conditional Flow Matching. The default
