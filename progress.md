@@ -36,4 +36,4 @@ metadata if desired.
 - Preserved model implementation and original license. Historical real-data
   results above were not rerun during this packaging task.
 - Destination requested: private `HHJIAnmo/eeg-conditional-ggrf-joint`.
-  Upload pending GitHub authentication.
+  Initial source commit uploaded successfully to the private repository.
