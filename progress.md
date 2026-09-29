@@ -57,3 +57,10 @@ metadata if desired.
 - Rendered each single-page PDF to a 3000-pixel-wide PNG for inline README display.
 - Retained byte-identical original PDFs and linked each preview to its PDF.
 - Visually checked both rendered figures; verified relative links and PDF hashes.
+
+## 2026-09-29 — signed edge velocity README animation
+
+- Added a looping GIF captured from the published interactive visualization.
+- Shows both class medians at the five supplied transport times without interpolating data.
+- Replaced the text-only entry with a clickable GIF linking to the full interactive page.
+- Checked captured frames, GIF frame count/loop settings, and README link targets.
