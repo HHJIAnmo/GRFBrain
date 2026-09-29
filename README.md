@@ -24,6 +24,8 @@ individual samples, and adjust brain opacity and transport time τ.
 Red indicates increasing predicted FC; blue indicates decreasing predicted FC.
 Click the animation to rotate, zoom, and select samples in the full interactive page.*
 
+**[Open the interactive 3D visualization](https://hhjianmo.github.io/eeg-conditional-ggrf-visualization/)**
+
 Or **[download the interactive HTML](docs/visualization/index.html)** using the
 file page's **Download raw file** button, then open it in a browser. An internet
 connection is required to load Plotly. GitHub's README and file preview do not
