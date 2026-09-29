@@ -1,24 +1,16 @@
-# Conditional GGRF + Joint Node–Edge Transformer for EEG
+# GRFBrain: Graph-Structured Rectified Flows for EEG Dynamic Modeling
 
-This repository is a clean, shareable extraction of the strongest deterministic
-downstream representation discovered in the EvoBrain ICLR-2027 study. It learns
-an EEG-conditioned Joint Node–Edge velocity network with a graph Gaussian random
-field (GGRF) source, then performs seizure classification with the
-`node_hidden_no_transport` readout.
+Forecasting time-varying functional connectivity from electroencephalography (EEG) requires modeling both history-dependent trends and structured variability across channels. Conditional flow matching provides a framework for distributional forecasting, yet it remains unclear whether graph-informed source distributions offer practical advantages over isotropic noise and strong deterministic predictors. We introduce a graph-structured residual flow framework that separates conditional mean prediction from stochastic residual transport. A history-only predictor estimates the future connectivity graph, while a graph Gaussian source encodes dependencies derived from past connectivity through a Laplacian-based covariance. A conditional velocity field transports source samples to future graph residuals, with transport time explicitly distinguished from physical EEG time. Our study identifies the conditions and controls needed to distinguish useful residual transport from improvements attributable to deterministic prediction, learned representations, and sampling effects.
 
-## Concept
+## Overview of GRFBrain
 
 [![Concept: flow-based forecasting for neuronal population dynamics, comparing isotropic and graph-structured sources](docs/figures/concept.png)](docs/figures/concept.pdf)
 
-**Figure 1. Conceptual illustration of the proposed approach.**
-[View / download the original PDF](docs/figures/concept.pdf).
 
 ## Method overview
 
 [![Method overview: temporal conditional source distribution and joint node-edge flow](docs/figures/overview.png)](docs/figures/overview.pdf)
 
-**Figure 2. Overview of the proposed approach.**
-[View / download the original PDF](docs/figures/overview.pdf).
 
 ## Interactive 3D visualization
 
@@ -35,26 +27,12 @@ execute interactive HTML; use the live page linked above.
 
 Original recording filenames and source indices are omitted from this page.
 The visualization shows transport trajectories; the default downstream
-classifier still uses the deterministic `node_hidden_no_transport` readout
-(`NFE=0`).
-
-## Important interpretation
-
-The overall representation is trained by conditional Flow Matching. The default
-downstream classifier does **not** sample and integrate a Flow trajectory:
-
-1. GGRF-conditioned Flow pretraining learns the Joint Node–Edge field.
-2. Downstream inference sets node and edge residuals to zero (`NFE=0`).
-3. The Joint field is evaluated once at transport time `tau=1` using past-only
-   temporal, graph, Laplacian and covariance conditions.
-4. Post-LayerNorm node tokens are classified by
-   `ReLU -> shared Linear(64,1) -> max over 19 nodes`.
-
-Therefore this is a **conditional GGRF-pretrained deterministic representation
-readout**, not a claim that test-time ODE transport improves classification.
-Physical EEG window time `s` and Flow transport time `tau` are always distinct.
+classifier.
 
 ## Data contract
+
+We use **Temple University Seizure Corpus (TUSZ)** dataset, publicly available at: [here](https://isip.piconepress.com/projects/tuh_eeg/).
+Once your request form is accepted, you can access the dataset.
 
 - 19 aligned EEG channels sampled at 200 Hz.
 - Twelve non-overlapping one-second windows per example.
@@ -125,7 +103,7 @@ thresholds before opening test.
 past-only graph forecaster and stores them in `calibration.json`. The supplied
 YAML values reproduce the current TUSZ contract but are not universal constants.
 
-## Importing an existing EvoBrain checkpoint
+## Importing an existing checkpoint
 
 The released submodule names preserve the original field, temporal encoder,
 graph forecaster and readout state dictionaries. If you are an authorized owner
