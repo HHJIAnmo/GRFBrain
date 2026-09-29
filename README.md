@@ -1,16 +1,14 @@
 # GRFBrain: Graph-Structured Rectified Flows for EEG Dynamic Modeling
 
+[![Concept: flow-based forecasting for neuronal population dynamics, comparing isotropic and graph-structured sources](docs/figures/concept.png)](docs/figures/concept.pdf)
+
 Forecasting time-varying functional connectivity from electroencephalography (EEG) requires modeling both history-dependent trends and structured variability across channels. Conditional flow matching provides a framework for distributional forecasting, yet it remains unclear whether graph-informed source distributions offer practical advantages over isotropic noise and strong deterministic predictors. We introduce a graph-structured residual flow framework that separates conditional mean prediction from stochastic residual transport. A history-only predictor estimates the future connectivity graph, while a graph Gaussian source encodes dependencies derived from past connectivity through a Laplacian-based covariance. A conditional velocity field transports source samples to future graph residuals, with transport time explicitly distinguished from physical EEG time. Our study identifies the conditions and controls needed to distinguish useful residual transport from improvements attributable to deterministic prediction, learned representations, and sampling effects.
 
 ## Overview of GRFBrain
 
-[![Concept: flow-based forecasting for neuronal population dynamics, comparing isotropic and graph-structured sources](docs/figures/concept.png)](docs/figures/concept.pdf)
-
-
-## Method overview
-
 [![Method overview: temporal conditional source distribution and joint node-edge flow](docs/figures/overview.png)](docs/figures/overview.pdf)
 
+Overview of the proposed GRFBrain. (a) Temporal EEG features and functional association graphs define state-dependent states and a graph Gaussian residual source, whose covariance is adapted to the observed graph states. (b) A joint node-edge velocity network transports node and edge residuals along a shared flow coordinate, coupling channel-wise state variations.
 
 ## Interactive 3D visualization
 
