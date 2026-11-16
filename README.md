@@ -127,21 +127,16 @@ permissions before publication.
 
 ## Repository contents
 
-- `src/eeg_cgfm/data`: log-FFT preprocessing, Spearman top-k graph construction,
+- `src/eeg_cgfm/data`: log-FFT preprocessing, top-k graph construction,
   stable NPZ dataset contract.
-- `src/eeg_cgfm/models/ggrf.py`: history-conditioned graph Gaussian operators and
+- `src/eeg_cgfm/models/ggrf.py`: dynamic graph-conditioned Gaussian operators and
   node/edge source sampling.
 - `src/eeg_cgfm/models/graph_forecaster.py`: deterministic conditional edge mean.
 - `src/eeg_cgfm/models/joint_transformer.py`: bidirectional node-edge velocity
   field with FiLM, edge-biased node attention and node-to-edge messages.
 - `src/eeg_cgfm/models/system.py`: temporal condition, normalized FM objective,
-  and deterministic no-transport readout.
+  and deterministic readout.
 - `src/eeg_cgfm/cli`: data, training, evaluation and smoke entry points.
 - `tests`: tensor-shape, causality, covariance, symmetry and gradient contracts.
 
-## Reproducibility and licensing
 
-No TUSZ data, pretrained weights, result caches, private paths or legacy SDE code
-are included. TUSZ access and redistribution remain governed by its provider.
-Code in this extraction is released under MIT; verify third-party dataset and
-checkpoint permissions separately before public distribution.
