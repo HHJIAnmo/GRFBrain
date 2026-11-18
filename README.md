@@ -24,14 +24,6 @@ Click the animation to rotate, zoom, and select samples in the full interactive 
 
 **[Open the interactive 3D visualization](https://hhjianmo.github.io/eeg-conditional-ggrf-visualization/)**
 
-Or **[download the interactive HTML](docs/visualization/index.html)** using the
-file page's **Download raw file** button, then open it in a browser. An internet
-connection is required to load Plotly. GitHub's README and file preview do not
-execute interactive HTML; click the animation above to open the live page.
-
-Original recording filenames and source indices are omitted from this page.
-The visualization shows transport trajectories; the default downstream
-classifier.
 
 ## Data contract
 
