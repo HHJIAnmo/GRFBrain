@@ -20,9 +20,6 @@ individual samples, and adjust brain opacity and transport time τ.
 
 *Signed edge velocity at τ = 0, 0.25, 0.5, 0.75, and 1 (looping preview).
 Red indicates increasing predicted FC; blue indicates decreasing predicted FC.
-Click the animation to rotate, zoom, and select samples in the full interactive page.*
-
-**[Open the interactive 3D visualization]((https://hhjianmo.github.io/eeg-conditional-ggrf-visualization/)**
 
 
 ## Data contract
@@ -39,8 +36,6 @@ Once your request form is accepted, you can access the dataset.
 - Raw TUSZ files are not distributed. A JSONL manifest points to user-owned
   `.npy`/`.npz` clips and supplies labels and split membership.
 
-See [docs/data_format.md](docs/data_format.md) and
-[docs/architecture.md](docs/architecture.md).
 
 ## Installation
 
