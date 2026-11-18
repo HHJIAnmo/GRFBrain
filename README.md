@@ -22,7 +22,7 @@ individual samples, and adjust brain opacity and transport time τ.
 Red indicates increasing predicted FC; blue indicates decreasing predicted FC.
 Click the animation to rotate, zoom, and select samples in the full interactive page.*
 
-**[Open the interactive 3D visualization](docs/visualization/)**
+**[Open the interactive 3D visualization]((https://hhjianmo.github.io/eeg-conditional-ggrf-visualization/)**
 
 
 ## Data contract
