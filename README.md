@@ -16,13 +16,13 @@ Explore predicted FC states and signed edge velocities for non-seizure and
 seizure examples. Rotate and zoom the linked 3D views, select class medians or
 individual samples, and adjust brain opacity and transport time τ.
 
-[![Signed edge velocity across transport time: non-seizure and seizure class medians](docs/figures/signed-edge-velocity.gif)](https://hhjianmo.github.io/eeg-conditional-ggrf-visualization/)
+[![Signed edge velocity across transport time: non-seizure and seizure class medians](docs/figures/signed-edge-velocity.gif)]
 
 *Signed edge velocity at τ = 0, 0.25, 0.5, 0.75, and 1 (looping preview).
 Red indicates increasing predicted FC; blue indicates decreasing predicted FC.
 Click the animation to rotate, zoom, and select samples in the full interactive page.*
 
-**[Open the interactive 3D visualization](https://hhjianmo.github.io/eeg-conditional-ggrf-visualization/)**
+**[Open the interactive 3D visualization](docs/visualization/)**
 
 
 ## Data contract
